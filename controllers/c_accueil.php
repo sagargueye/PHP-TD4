@@ -46,6 +46,7 @@ if(isset($_GET['idi']))
     }
 
 }
+
 else ////////////////////////////////////////Première Partie Page principale///////////////////////////////////////////
 {
 
@@ -199,6 +200,14 @@ else ////////////////////////////////////////Première Partie Page principale///
 
 }
 
+
+///////////////////////////////  lorsque l'utilisateur clique sur connexion/////////////////////////////////
+
+if(isset($_GET['page']))
+{
+	$page="session" ;
+	require_once(PATH_VIEWS.$page.'.php'); 
+}
 
 require_once(PATH_VIEWS.$page.'.php'); 
 

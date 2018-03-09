@@ -4,15 +4,15 @@ const DEBUG = true; // production : false; dev : true
 
 // Accès base de données
 const BD_HOST = 'localhost';
-const BD_DBNAME = 'p1606501';
-const BD_USER = 'p1606501';
-const BD_PWD = '269879';
+const BD_DBNAME = 'gueye';
+const BD_USER = 'root';
+const BD_PWD = 'Gueye1997';
 
 // Langue du site
 const LANG ='FR-fr';
 
 // Paramètres du site : nom de l'auteur ou des auteurs
-const AUTEUR = 'PERREAUT & GUEYE'; 
+const AUTEUR = 'sagar gueye'; 
 
 //dossiers racines du site
 define('PATH_CONTROLLERS','./controllers/c_');
@@ -34,3 +34,4 @@ define('PATH_SCRIPTS', PATH_ASSETS.'scripts/');
 //define('LOG_BDD','logbdd.txt');
 define('PATH_LOGO', PATH_IMAGES.'logo.png');
 define('PATH_MENU', PATH_VIEWS.'menu.php');
+define('PATH_SESSION', PATH_VIEWS.'session.php');

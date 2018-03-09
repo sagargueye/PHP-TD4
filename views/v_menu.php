@@ -23,7 +23,13 @@
 					</a>
 				</li>
     </ul>
+	<ul class="nav navbar-nav navbar-right">
+				<li <?php echo ($page=='connexion' ? 'class="active"':'')?>>
+					<a href="session.php">
+						<?= MENU_CONNEXION ?>
+					</a>
+				</li>
+    </ul>
   </div>
 </nav>
-
 

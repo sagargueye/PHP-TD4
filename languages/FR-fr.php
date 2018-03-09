@@ -3,6 +3,7 @@
 define('LOGO', 'Logo de la compagnie'); // Affiché si image non trouvée
 
 define('MENU_ACCUEIL','Accueil');
+define('MENU_CONNEXION','Connexion');
 define('TITRE_PAGE_ACCUEIL','Tous les films');
 define('MENU_HELLO','Hello');
 define('TITRE_PAGE_HELLO','Résultat');
