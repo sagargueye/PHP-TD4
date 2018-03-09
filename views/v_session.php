@@ -6,7 +6,7 @@
 <h1> Connexion pour modifier le catalogue</h1>
 
 <!--Formulaire permettant de se connecter à une session-->
-<form method="post" action="connecter.php">
+<form method="post" action="masession.php">
    <p>
        <label for="identifiant"><b>Identifiant</b> :</label>
        <input type="text" name="identifiant" id="identifiant" />
