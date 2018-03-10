@@ -7,6 +7,6 @@ require_once(PATH_TEXTES.LANG.'.php');
 
 $page="session";
 //appel du controller
-require_once(PATH_CONTROLLERS.$page.'.php'); 
-
+//require_once(PATH_CONTROLLERS.$page.'.php'); 
+require_once(PATH_VIEWS.$page.'.php'); 
 ?>

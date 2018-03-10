@@ -1,6 +1,8 @@
 <!--  En tête de page -->
 <?php require_once(PATH_VIEWS.'header.php');?>
 
+<!--  Zone message d'alerte 1 -->
+<?php require_once(PATH_VIEWS.'alert_Login_password.php');?>
 
 <!--  contenue de la page-->
 <h1> Connexion pour modifier le catalogue</h1>

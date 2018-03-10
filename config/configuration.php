@@ -7,7 +7,9 @@ const BD_HOST = 'localhost';
 const BD_DBNAME = 'gueye';
 const BD_USER = 'root';
 const BD_PWD = 'Gueye1997';
-
+ const admis_user ='root';
+ $cripte= sha1('root');
+ const admis_pwd ='root';
 // Langue du site
 const LANG ='FR-fr';
 

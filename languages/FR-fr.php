@@ -19,4 +19,5 @@ define('ERREUR_QUERY_BDD',"Erreur d'accès à la base de données");
 define('SUBMIT', "Valider");
 define('NOM', "Login");
 define('TITRE', 'Films disponibles');
+define('ERREUR_IDENTIFICATION', "Login et/ou mot de passe inconnu");
 

@@ -35,21 +35,21 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-				<li <?php echo ($page=='accueil' ? 'class="active"':'')?>>
+				<li <?php echo ($page=='accueil')?> >
 					<a href="index.php">
 						<?= MENU_ACCUEIL ?>
 					</a>
 				</li>
     </ul>
 	<ul class="nav navbar-nav">
-				<li <?php echo ($page=='accueil' ? 'class="active"':'')?>>
-					<a href="index.php">
+				<li <?php echo ($page=='masession.php')?>  class=active>
+					<a href="masession.php">
 						Ajouter un film
 					</a>
 				</li>
     </ul>
 	<ul class="nav navbar-nav navbar-right">
-				<li <?php echo ($page=='connexion' ? 'class="active"':'')?>>
+				<li <?php echo ($page=='connexion')?>  >
 					<a href="session.php">
 						Deconnexion
 					</a>
@@ -65,19 +65,18 @@
 <!--  contenue de la page-->
 
 <h1>Quel film ?</h1>
-<FORM action =" traitementFormFilm .php" method =" POST "
-enctype =" multipart /form - data ">
+<FORM action="index.php" method =" POST "enctype =" multipart /form - data ">
 
 
 	<div class="form-group">
-		<label for="exampleInputFile">choisir sur le fichier:</label>
+		<label for="exampleInputFile">choisir le fichier:</label>
 		<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
 		<small id="fileHelp" class="form-text text-muted"></small>
 	</div>
 	<div>
 		 <label for="exampleInputFile"><b>Titre du film:</b></label>
 		 <br>
-		 <input type =" submit " value =" Valider ">
+		 <input type =" submit " value =" ex: titanic">
 		 <br>
 	</div> 
 	<div class="form-group">
@@ -88,13 +87,11 @@ enctype =" multipart /form - data ">
   
   <div class="form-group">
   <br>
-    <label for="exampleSelect1">select un genre:</label><br>
-    <select class="form-control" id="exampleSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+    <label for="exampleSelect1">choisir un genre:</label><br>
+    <select name="liste" class="form-control" id="exampleSelect1">
+  			<?php foreach  ($ge as $val) { ?>
+			<option value="<?=$val->getlibelle()?>" <?php if(isset($liste)) if($liste==$val->getlibelle()) echo "selected"; ?>><?php echo $val->getlibelle()?></option>
+  			<?php } ?>
     </select>
   </div>
   
