@@ -7,7 +7,7 @@ require_once(PATH_TEXTES.LANG.'.php');
 
 	
 	
-    // On définit un identifiant et un mot de passe de base : admin .
+			// On définit un identifiant et un mot de passe de base : admin .
     $login_valide = admis_user;
     $pwd_valide = admis_pwd;
 
@@ -26,12 +26,13 @@ require_once(PATH_TEXTES.LANG.'.php');
 
     		// on redirige notre visiteur vers sa session
     		header ('location: masession.php');
-    	}
+    	}// L'identifiant n'a pas été reconnu. On utilise alors un message d'erreur lui signalant ce fait
+		elseif ($login_valide != $_POST['identifiant'] && $pwd_valide == $_POST['mdp']){
+			$page="identification";
+			require_once(PATH_VIEWS.$page.'.php');
+		}
     	else {
-    		// L'identifiant et/ou le mdp n'a pas été reconnu. On utilise alors un message d'erreur lui signalant ce fait
-			//$page="identification";
-			//appel du controller
-			//require_once(PATH_CONTROLLERS.$page.'.php'); 
+    		//  le mdp n'a pas été reconnu. On utilise alors un message d'erreur lui signalant ce fait
 			$page="identification";
 			require_once(PATH_VIEWS.$page.'.php');
 			
