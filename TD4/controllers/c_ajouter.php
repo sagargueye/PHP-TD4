@@ -6,23 +6,17 @@ require_once (PATH_MODELS . 'FilmDAO.php');
 require_once (PATH_MODELS . 'GenreDAO.php');
 
 
-$genfilm = array();
+
 
 $gDAO=new GenreDAO(DEBUG);
 $fDAO=new FilmDAO(DEBUG);
 
+$erreur_ajout=null;
+
 $i=1;
 $valide=0;
-do
-{
-	$g=$gDAO->getById($i);
-	if($g!=null)
-	{
-            $genfilm[]=$g;
-            $i=$i+1;
-	}
-}
-while(($g!=null));
+
+$genfilm=$gDAO->getAllgenre();
 
 if(isset($_POST['genrefilm']))
 {
@@ -31,7 +25,7 @@ if(isset($_POST['genrefilm']))
 	
 	if($genrefilm=='Tous les genres')
 	{
-		$alert=choixAlert('genrefilm_invalide');
+		$erreur_ajout= ERREUR_GENREFILM;
 		$valide=0;
 	}
 		
@@ -50,7 +44,7 @@ if(isset($_POST['resumefilm']))
 	}
 	else
 	{
-		$alert=choixAlert('resumefilm_invalide');
+		$erreur_ajout=ERREUR_RESUMEFILM .' , '. $erreur_ajout;
 		$valide=0;
 	}
 		
@@ -67,7 +61,7 @@ if(isset($_POST['titrefilm']))
 	}
 	else
 	{
-		$alert=choixAlert('titrefilm_invalide');
+		$erreur_ajout=ERREUR_TITREFILM .' , '. $erreur_ajout;
 		$valide=0;
 	}
 		
@@ -79,7 +73,7 @@ if(isset($_FILES['imgfilm']['name']))
 	
 	if($_FILES['imgfilm']['size']>=100000)
 	{
-		$alert=choixAlert('imagefilm2_invalide');
+		$erreur_ajout=ERREUR_IMAGEFILM2.' , '.$erreur_ajout;
 		$valide=0;
 	}
 	
@@ -91,11 +85,16 @@ if(isset($_FILES['imgfilm']['name']))
 	}
 	else
 	{
-		$alert=choixAlert('imagefilm1_invalide');
+		$erreur_ajout=ERREUR_IMAGEFILM1.' , '.$erreur_ajout;
 		$valide=0;
 	}
 	
-	if($valide)
+	if($erreur_ajout!=null)
+	{
+		$alert=choixAlert('ajout_film', $erreur_ajout);
+	}
+	
+	if(! isset($alert))
 	{
 
 		$g=$gDAO->getbylibelle($genrefilm);

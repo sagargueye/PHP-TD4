@@ -41,8 +41,9 @@ define('ERREUR_QUERY_BDD',"Erreur d'accès à la base de données");
 define('ERREUR_IDENTIFIANT', "Cet identifiant est inconnu!");
 define('ERREUR_MOTDEPASSE', "Mot de passe incorrect!");
 define('CONNEXION_VALIDE', "Vous etes connecté(e)");
-define('ERREUR_TITREFILM', "Le titre du film doit contenit au moins un caractère");
-define('ERREUR_RESUMEFILM', "Le résumé du film du film doit contenit au moins un caractère");
+
+define('ERREUR_TITREFILM', "Le titre du film doit contenir au moins un caractère");
+define('ERREUR_RESUMEFILM', "Le résumé du film du film doit contenir au moins un caractère");
 define('ERREUR_GENREFILM', "Un genre doit etre choisit");
 define('ERREUR_IMAGEFILM1', "Le format de l'image doit etre en JPEG, GIF ou PNG");
 define('ERREUR_IMAGEFILM2', "La taille de l'image ne doit pas dépasser 100Ko");

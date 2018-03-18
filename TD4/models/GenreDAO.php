@@ -17,6 +17,19 @@ class GenreDAO extends DAO
         }
         return $genres;
     }
+	
+    public function getAllgenre()
+    {
+        $res = $this->queryAll('SELECT * FROM genre');
+        if ($res == false)
+            $genres = array();
+        else {
+            foreach ($res as $p) {
+                $genres[] = new Genre($p['id'], $p['libelle']);
+            }
+        }
+        return $genres;
+    }
 
     public function getById($id)
     {

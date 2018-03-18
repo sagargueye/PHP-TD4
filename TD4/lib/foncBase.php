@@ -37,7 +37,9 @@ function choixAlert($message, $nbP = null)
             }
 	    case 'login' :
 				$alert['messageAlert'] = ERREUR_INSCRIPTION;
-				break;		
+				break;
+
+			
 	    case 'identifiant_invalide' :
       $alert['messageAlert'] = ERREUR_IDENTIFIANT;	
 		break;
@@ -48,22 +50,16 @@ function choixAlert($message, $nbP = null)
 	  $alert['classAlert'] = 'success';
       $alert['messageAlert'] = CONNEXION_VALIDE;
 	  break;
-	case 'titrefilm_invalide' :
-      $alert['messageAlert'] = ERREUR_TITREFILM;
-	  break;
-	case 'resumefilm_invalide' :
-      $alert['messageAlert'] = ERREUR_RESUMEFILM;
-	  break;	
-	case 'genrefilm_invalide' :
-      $alert['messageAlert'] = ERREUR_GENREFILM;
-	  break;	
-	case 'imagefilm1_invalide' :
-      $alert['messageAlert'] = ERREUR_IMAGEFILM1;
-	  break;
-	case 'imagefilm2_invalide' :
-      $alert['messageAlert'] = ERREUR_IMAGEFILM2;
-	  break;	  
-	
+	  
+	case 'ajout_film':
+		
+		if(isset($nbP))
+		{
+			$alert['classAlert'] = 'danger';
+			$alert['messageAlert'] = $nbP;
+			break;
+		}
+		
 		
         default:
             $alert['messageAlert'] = MESSAGE_ERREUR;
