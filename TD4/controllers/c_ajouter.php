@@ -6,8 +6,6 @@ require_once (PATH_MODELS . 'FilmDAO.php');
 require_once (PATH_MODELS . 'GenreDAO.php');
 
 
-
-
 $gDAO=new GenreDAO(DEBUG);
 $fDAO=new FilmDAO(DEBUG);
 
@@ -94,8 +92,7 @@ if(isset($_FILES['imgfilm']['name']))
 	
 		$f=$fDAO->getAll();
 		foreach($f as $val)
-		{
-				
+		{		
 		}
 		
 		$j=$val->getId();

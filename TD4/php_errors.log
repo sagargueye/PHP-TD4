@@ -67,3 +67,4 @@
 [18-Mar-2018 21:11:25 Europe/Paris] PHP Notice:  Use of undefined constant teest - assumed 'teest' in /home/UNIV-LYON1/p1606501/public_html/TD4/lib/foncBase.php on line 55
 [18-Mar-2018 21:23:46 Europe/Paris] PHP Fatal error:  Undefined constant 'ERREUR_GENREFILM\n' in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_ajouter.php on line 40
 [19-Mar-2018 12:59:16 Europe/Paris] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_menu.php on line 64
+[19-Mar-2018 18:58:03 Europe/Paris] PHP Parse error:  syntax error, unexpected '{' in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_accueil.php on line 12

@@ -40,7 +40,7 @@
     	</li>	
 	
 				<li <?php echo ($page=='deconnexion' ? 'class="active"':'')?>>
-					<a href="index.php?page=deconnexion">
+					<a href="index.php?deconnexion">
 						<?= MENU_DECONNEXION ?>
 					</a>
 				</li>						
