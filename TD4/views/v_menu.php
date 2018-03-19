@@ -33,11 +33,11 @@
 	?>
     <ul class="nav navbar-nav navbar-right">
     	<li style="margin-top : 8px">
-    		<form method="POST" class="form-inline my-2 my-lg-0" id="search" action="index.php?page=recherche">
-			  <input id="search" name="search" class="form-control mr-sm-2" placeholder="<?= isset($search) ? $search  : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
-			  <button class="btn btn-success my-2 my-sm-0" type="submit"><?= CHERCHER ?></button>
+    		<form method="POST" class="form-inline" id="search" action="index.php?page=recherche">
+			  <input id="search" name="search" class="form-control" value="<?= isset($search) ? $search : ""?>" placeholder="<?= isset($search) ? "" : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
+			  <button class="btn btn-success" type="submit"><?= CHERCHER ?></button>
 			</form>
-    	</li>		
+    	</li>	
 	
 				<li <?php echo ($page=='deconnexion' ? 'class="active"':'')?>>
 					<a href="index.php?page=deconnexion">
@@ -61,7 +61,7 @@
     <ul class="nav navbar-nav navbar-right">
     	<li style="margin-top : 8px">
     		<form method="POST" class="form-inline" id="search" action="index.php?page=recherche">
-			  <input id="search" name="search" class="form-control" placeholder="<?= isset($search) ? $search  : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
+			  <input id="search" name="search" class="form-control" value="<?= isset($search) ? $search : ""?>" placeholder="<?= isset($search) ? "" : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
 			  <button class="btn btn-success" type="submit"><?= CHERCHER ?></button>
 			</form>
     	</li>	

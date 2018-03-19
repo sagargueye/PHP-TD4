@@ -13,20 +13,15 @@ $fDAO=new FilmDAO(DEBUG);
 
 $erreur_ajout=null;
 
-$i=1;
-$valide=0;
-
 $genfilm=$gDAO->getAllgenre();
 
 if(isset($_POST['genrefilm']))
 {
-	$valide=1;
 	$genrefilm=htmlspecialchars($_POST['genrefilm']);
 	
 	if($genrefilm=='Tous les genres')
 	{
 		$erreur_ajout= ERREUR_GENREFILM;
-		$valide=0;
 	}
 		
 }
@@ -45,7 +40,6 @@ if(isset($_POST['resumefilm']))
 	else
 	{
 		$erreur_ajout=ERREUR_RESUMEFILM .' , '. $erreur_ajout;
-		$valide=0;
 	}
 		
 }
@@ -62,7 +56,6 @@ if(isset($_POST['titrefilm']))
 	else
 	{
 		$erreur_ajout=ERREUR_TITREFILM .' , '. $erreur_ajout;
-		$valide=0;
 	}
 		
 }
@@ -74,7 +67,6 @@ if(isset($_FILES['imgfilm']['name']))
 	if($_FILES['imgfilm']['size']>=100000)
 	{
 		$erreur_ajout=ERREUR_IMAGEFILM2.' , '.$erreur_ajout;
-		$valide=0;
 	}
 	
 	if((preg_match('#^.+.png$#',$_FILES['imgfilm']['name']))||
@@ -86,7 +78,6 @@ if(isset($_FILES['imgfilm']['name']))
 	else
 	{
 		$erreur_ajout=ERREUR_IMAGEFILM1.' , '.$erreur_ajout;
-		$valide=0;
 	}
 	
 	if($erreur_ajout!=null)
@@ -96,7 +87,8 @@ if(isset($_FILES['imgfilm']['name']))
 	
 	if(! isset($alert))
 	{
-
+		$valide=1;
+		
 		$g=$gDAO->getbylibelle($genrefilm);
 		$i=$g->getId();
 	
