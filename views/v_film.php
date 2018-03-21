@@ -47,13 +47,20 @@ if (! isset($erreur)) {
 		</tr>
 	</table>
 	<br /> 
-	<br /> 
 	<?php if(isset($_SESSION['logged']))
 	{
 	?>
+	
+		<FORM method="POST" action="index.php?page=modifier&modid=<?= $film->getId()?>">
+			<input class="btn btn-info" type="submit" value="Modifier">
+		</FORM>
+		
+		<br /> 
+		
 		<FORM method="POST" action="index.php?supprid=<?= $film->getId()?>">
 			<input class="btn btn-danger" type="submit" value="<?= SUPPR ?>">
 		</FORM>
+
 	<?php
 	}
 	?>

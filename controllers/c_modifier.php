@@ -11,8 +11,20 @@ $fDAO=new FilmDAO(DEBUG);
 
 $erreur_ajout=null;
 
-$genfilm=$gDAO->getAllgenre();
 
+$modid = (int) $_GET['modid'];
+
+$film=$fDAO->getById($modid);
+$genre=$gDAO->getById($film->getGenId());
+
+
+$titrefilm=$film->getTitre();
+$resumefilm=$film->getResume();
+
+
+$genrefilm=$genre->getlibelle();
+
+$genfilm=$gDAO->getAllgenre();
 if(isset($_POST['genrefilm']))
 {
 	$genrefilm=htmlspecialchars($_POST['genrefilm']);
@@ -59,63 +71,31 @@ if(isset($_POST['titrefilm']))
 }
 
 
-if(isset($_FILES['imgfilm']['name']))
-{
-	
-	if($_FILES['imgfilm']['size']>=100000)
-	{
-		$erreur_ajout=ERREUR_IMAGEFILM2.' , '.$erreur_ajout;
-	}
-	
-	if((preg_match('#^.+.png$#',$_FILES['imgfilm']['name']))||
-	(preg_match('#^.+.gif$#',$_FILES['imgfilm']['name']))||
-	(preg_match('#^.+.jpg$#',$_FILES['imgfilm']['name'])) )
-	{
-		
-	}
-	else
-	{
-		$erreur_ajout=ERREUR_IMAGEFILM1.' , '.$erreur_ajout;
-	}
-	
 	if($erreur_ajout!=null)
 	{
 		$alert=choixAlert('ajout_film', $erreur_ajout);
 	}
 	
-	if(! isset($alert))
+	if(! isset($alert)&(($titrefilm!=$film->getTitre())||($resumefilm!=$film->getResume())||($genrefilm!=$genre->getlibelle())))
 	{
 		$valide=1;
 		
+	
 		$g=$gDAO->getbylibelle($genrefilm);
-		$i=$g->getId();
-	
-		$f=$fDAO->getAll();
-		foreach($f as $val)
-		{		
-		}
-		
-		$j=$val->getId();
-		$j=$j+1;
-		
-		$extension_upload = strtolower(  substr(  strrchr($_FILES['imgfilm']['name'], '.')  ,1)  );
-		$nom="assets/images/DSC{$j}.{$extension_upload}";		
-				
-		$fDAO->insertfilm($j,$titrefilm,$resumefilm,"DSC{$j}.{$extension_upload}",$i);
+		$idgenre=$g->getId();
+			
+		$fDAO->updatefilm($modid,$titrefilm,$resumefilm,$idgenre);
 	
 		
-		move_uploaded_file($_FILES['imgfilm']['tmp_name'],$nom);
 		
 		$page="film";
-		$_GET['id']=$j;
-
+		$_GET['id']=$modid;
 		
 		require_once(PATH_CONTROLLERS.$page.'.php');
 		
 	}
-	
 		
-}
+
 
 
 

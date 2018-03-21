@@ -68,3 +68,31 @@
 [18-Mar-2018 21:23:46 Europe/Paris] PHP Fatal error:  Undefined constant 'ERREUR_GENREFILM\n' in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_ajouter.php on line 40
 [19-Mar-2018 12:59:16 Europe/Paris] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_menu.php on line 64
 [19-Mar-2018 18:58:03 Europe/Paris] PHP Parse error:  syntax error, unexpected '{' in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_accueil.php on line 12
+[21-Mar-2018 19:04:16 Europe/Paris] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 24
+[21-Mar-2018 19:10:57 Europe/Paris] PHP Notice:  Undefined variable: modid in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 15
+[21-Mar-2018 19:10:57 Europe/Paris] PHP Fatal error:  Call to a member function getGenId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 16
+[21-Mar-2018 19:11:46 Europe/Paris] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE) in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 14
+[21-Mar-2018 19:11:59 Europe/Paris] PHP Notice:  Undefined index: modid in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 14
+[21-Mar-2018 19:11:59 Europe/Paris] PHP Fatal error:  Call to a member function getGenId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 17
+[21-Mar-2018 19:12:25 Europe/Paris] PHP Notice:  Undefined index: modid in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 14
+[21-Mar-2018 19:12:25 Europe/Paris] PHP Fatal error:  Call to a member function getGenId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 17
+[21-Mar-2018 19:12:39 Europe/Paris] PHP Notice:  Undefined variable: genrefilm in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 78
+[21-Mar-2018 19:12:39 Europe/Paris] PHP Fatal error:  Call to a member function getId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 79
+[21-Mar-2018 19:13:34 Europe/Paris] PHP Notice:  Array to string conversion in /home/UNIV-LYON1/p1606501/public_html/TD4/models/DAO.php on line 40
+[21-Mar-2018 19:13:34 Europe/Paris] PHP Fatal error:  Call to a member function getId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 80
+[21-Mar-2018 19:14:24 Europe/Paris] PHP Notice:  Array to string conversion in /home/UNIV-LYON1/p1606501/public_html/TD4/models/DAO.php on line 40
+[21-Mar-2018 19:14:24 Europe/Paris] PHP Notice:  Undefined variable: j in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 89
+[21-Mar-2018 19:14:36 Europe/Paris] PHP Notice:  Array to string conversion in /home/UNIV-LYON1/p1606501/public_html/TD4/models/DAO.php on line 40
+[21-Mar-2018 19:15:14 Europe/Paris] PHP Notice:  Undefined variable: genrefilm in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 79
+[21-Mar-2018 19:17:52 Europe/Paris] PHP Notice:  Undefined variable: gen in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_film.php on line 46
+[21-Mar-2018 19:17:52 Europe/Paris] PHP Fatal error:  Call to a member function getId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_film.php on line 46
+[21-Mar-2018 19:18:18 Europe/Paris] PHP Notice:  Undefined variable: gen in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_film.php on line 46
+[21-Mar-2018 19:18:18 Europe/Paris] PHP Fatal error:  Call to a member function getId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_film.php on line 46
+[21-Mar-2018 19:18:47 Europe/Paris] PHP Parse error:  syntax error, unexpected '?>' in /home/UNIV-LYON1/p1606501/public_html/TD4/views/v_modifier.php on line 24
+[21-Mar-2018 19:24:57 Europe/Paris] PHP Notice:  Undefined index: modid in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 14
+[21-Mar-2018 19:24:57 Europe/Paris] PHP Fatal error:  Call to a member function getGenId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 17
+[21-Mar-2018 19:27:42 Europe/Paris] PHP Notice:  Undefined index: modid in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 15
+[21-Mar-2018 19:27:42 Europe/Paris] PHP Fatal error:  Call to a member function getGenId() on a non-object in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 18
+[21-Mar-2018 19:36:21 Europe/Paris] PHP Parse error:  syntax error, unexpected '{' in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 80
+[21-Mar-2018 19:36:37 Europe/Paris] PHP Notice:  Use of undefined constant resumefilm - assumed 'resumefilm' in /home/UNIV-LYON1/p1606501/public_html/TD4/controllers/c_modifier.php on line 79
+[21-Mar-2018 19:46:20 Europe/Paris] PHP Parse error:  syntax error, unexpected '}' in /home/UNIV-LYON1/p1606501/public_html/TD4/models/FilmDAO.php on line 61

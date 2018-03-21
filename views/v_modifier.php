@@ -21,15 +21,10 @@
 
 
 
-<h1><?= TITRE_PAGE_AJOUTER ?></h1>
+<h1>Modifier le film </h1>
 
-<form action="index.php?page=ajouter" method="post" enctype="multipart/form-data"> 
+<form action="index.php?page=modifier&modid=<?=$modid?>" method="post" "> 
 
-<div class="form-group">
-   <label for="exampleInputFile">Choisir un fichier</label>
-   <input   name="imgfilm" type="file" class="form-control-file" aria-describedby="fileHelp">
-   <small id="fileHelp" class="form-text text-muted"></small>
-</div>
 
 <div class="form-group row" >
   <label for="example-text-input"  class="col-2 col-form-label">Titre du film :</label>

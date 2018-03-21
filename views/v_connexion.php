@@ -35,7 +35,7 @@ else
 		<input type="text" name = "nom" />
 	</label>
 	<label><?= MDP ?>
-		<input type="text" name = "mdp" />
+		<input type="password" name = "mdp" />
 	</label> 
 	<input type="submit" value="<?= CONNECTER ?>">
 	</form>

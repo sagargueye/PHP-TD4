@@ -55,6 +55,11 @@ class FilmDAO extends DAO
     $res = $this->queryBdd('INSERT INTO film (id,titre,resume,nomFichier,genId) VALUES("'.$id.'","'.$titrefilm.'","'.$resumefilm.'","'.$nomfichier.'","'.$idgenrefilm.'")',array($id,$titrefilm,$resumefilm,$nomfichier,$idgenrefilm));	
   }	
   
+   public function updatefilm($id,$titrefilm,$resumefilm,$idgenrefilm){
+    
+    $res = $this->queryBdd('update film set titre=?,resume=?,genId=?  where id = ? ',array($titrefilm,$resumefilm,$idgenrefilm,$id));
+   }
+  
   public function supprfilm($id){
     
     $res = $this->queryBdd('DELETE FROM film where id = ?',array($id));	

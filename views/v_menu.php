@@ -34,7 +34,7 @@
     <ul class="nav navbar-nav navbar-right">
     	<li style="margin-top : 8px">
     		<form method="POST" class="form-inline" id="search" action="index.php?page=recherche">
-			  <input id="search" name="search" class="form-control" value="<?= isset($search) ? $search : ""?>" placeholder="<?= isset($search) ? "" : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
+			  <input size="25" id="search" name="search" class="form-control" value="<?= isset($search) ? $search : ""?>" placeholder="<?= isset($search) ? "" : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
 			  <button class="btn btn-success" type="submit"><?= CHERCHER ?></button>
 			</form>
     	</li>	
@@ -60,8 +60,8 @@
 	
     <ul class="nav navbar-nav navbar-right">
     	<li style="margin-top : 8px">
-    		<form method="POST" class="form-inline" id="search" action="index.php?page=recherche">
-			  <input id="search" name="search" class="form-control" value="<?= isset($search) ? $search : ""?>" placeholder="<?= isset($search) ? "" : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
+    		<form  method="POST" class="form-inline" id="search" action="index.php?page=recherche">
+			  <input size="25" id="search" name="search" class="form-control " value="<?= isset($search) ? $search : ""?>" placeholder="<?= isset($search) ? "" : 'Rechercher un nom de film'?>" aria-label="Search" type="search">
 			  <button class="btn btn-success" type="submit"><?= CHERCHER ?></button>
 			</form>
     	</li>	
