@@ -13,6 +13,8 @@ $erreur_ajout=null;
 
 $genfilm=$gDAO->getAllgenre();
 
+
+//Traitement choix du genre
 if(isset($_POST['genrefilm']))
 {
 	$genrefilm=htmlspecialchars($_POST['genrefilm']);
@@ -24,8 +26,7 @@ if(isset($_POST['genrefilm']))
 		
 }
 
-
-
+//Traitement saisie du résumé du film
 if(isset($_POST['resumefilm']))
 {
 
@@ -42,6 +43,7 @@ if(isset($_POST['resumefilm']))
 		
 }
 
+//Traitement saisie du titre du film
 if(isset($_POST['titrefilm']))
 {
 	
@@ -58,7 +60,7 @@ if(isset($_POST['titrefilm']))
 		
 }
 
-
+//Traitement envoie d'une image
 if(isset($_FILES['imgfilm']['name']))
 {
 	

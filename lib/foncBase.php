@@ -7,6 +7,9 @@ function choixAlert($message, $nbP = null)
         case 'aucun_film_selectionne':
             $alert['messageAlert'] = AUCUN_FILM;
             break;
+		 case 'changer_valeur':
+            $alert['messageAlert'] = MODIFIER_VALEUR;
+            break;
         case 'filmrecherche_invalide':
             $alert['messageAlert'] = ERREUR_FILMCHERCHE;
             break;

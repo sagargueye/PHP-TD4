@@ -33,14 +33,13 @@
 
 <div class="form-group row" >
   <label for="example-text-input"  class="col-2 col-form-label">Titre du film :</label>
-  <div class="col-10" >
-    <input  name="titrefilm" class="form-control" type="text" id="example-text-input" value="<?= isset($titrefilm) ? $titrefilm : ""?>">
-  </div>
+    <input  name="titrefilm" class="form-control" type="text" id="example-text-input" value="<?= isset($titrefilm) ? $titrefilm : ""?>" >
+
 </div>
 
   <div class="form-group">
     <label for="exampleTextarea">Résumé du film :</label>
-    <textarea  name="resumefilm" class="form-control" id="exampleTextarea" rows="3" ><?= isset($resumefilm) ? $resumefilm : ""?></textarea>
+    <textarea  name="resumefilm" class="form-control" id="exampleTextarea" rows="3" cols="5" ><?= isset($resumefilm) ? $resumefilm : ""?></textarea>
   </div>
   
  <label>Choisir un genre<select name="genrefilm" class="custom-select">

@@ -26,7 +26,7 @@ const ADMINISTRATEUR_MDP='5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8';
 const LANG ='FR-fr';
 
 // Paramètres du site : nom de l'auteur ou des auteurs
-const AUTEUR = 'PERREAUT & SAGAR'; 
+const AUTEUR = 'PERREAUT & GUEYE'; 
 
 //dossiers racines du site
 define('PATH_CONTROLLERS','./controllers/c_');

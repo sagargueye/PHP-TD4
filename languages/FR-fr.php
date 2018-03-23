@@ -47,7 +47,8 @@ define('ERREUR_RESUMEFILM', "Le résumé du film du film doit contenir au moins 
 define('ERREUR_GENREFILM', "Un genre doit etre choisit");
 define('ERREUR_IMAGEFILM1', "Le format de l'image doit etre en JPEG, GIF ou PNG");
 define('ERREUR_IMAGEFILM2', "La taille de l'image ne doit pas dépasser 100Ko");
-define('ERREUR_FILMCHERCHE', "Aucun film ne possède se nom");
+define('ERREUR_FILMCHERCHE', "Aucun film ne possède ce nom");
+define('MODIFIER_VALEUR', "Il n'y a aucune modification");
 
 define('ENVOYER', "Envoyer");
 define('CONNECTER', "Se connecter");

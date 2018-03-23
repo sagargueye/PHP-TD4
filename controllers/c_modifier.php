@@ -18,12 +18,6 @@ $film=$fDAO->getById($modid);
 $genre=$gDAO->getById($film->getGenId());
 
 
-$titrefilm=$film->getTitre();
-$resumefilm=$film->getResume();
-
-
-$genrefilm=$genre->getlibelle();
-
 $genfilm=$gDAO->getAllgenre();
 if(isset($_POST['genrefilm']))
 {
@@ -34,6 +28,10 @@ if(isset($_POST['genrefilm']))
 		$erreur_ajout= ERREUR_GENREFILM;
 	}
 		
+}
+else
+{
+		$genrefilm=$genre->getlibelle();
 }
 
 
@@ -53,6 +51,10 @@ if(isset($_POST['resumefilm']))
 	}
 		
 }
+else
+{
+	$resumefilm=$film->getResume();
+}
 
 if(isset($_POST['titrefilm']))
 {
@@ -69,32 +71,36 @@ if(isset($_POST['titrefilm']))
 	}
 		
 }
+else
+{
+	$titrefilm=$film->getTitre();
+}
 
 
-	if($erreur_ajout!=null)
-	{
+if($erreur_ajout!=null)
+{
 		$alert=choixAlert('ajout_film', $erreur_ajout);
-	}
+}
 	
-	if(! isset($alert)&(($titrefilm!=$film->getTitre())||($resumefilm!=$film->getResume())||($genrefilm!=$genre->getlibelle())))
-	{
-		$valide=1;
+if(! isset($alert)&(($titrefilm!=$film->getTitre())||($resumefilm!=$film->getResume())||($genrefilm!=$genre->getlibelle())))
+{
+	$valide=1;
 		
 	
-		$g=$gDAO->getbylibelle($genrefilm);
-		$idgenre=$g->getId();
+	$g=$gDAO->getbylibelle($genrefilm);
+	$idgenre=$g->getId();
 			
-		$fDAO->updatefilm($modid,$titrefilm,$resumefilm,$idgenre);
+	$fDAO->updatefilm($modid,$titrefilm,$resumefilm,$idgenre);
 	
 		
 		
-		$page="film";
-		$_GET['id']=$modid;
+	$page="film";
+	$_GET['id']=$modid;
 		
-		require_once(PATH_CONTROLLERS.$page.'.php');
+	require_once(PATH_CONTROLLERS.$page.'.php');
 		
-	}
-		
+}
+
 
 
 
